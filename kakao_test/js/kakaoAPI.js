@@ -2,7 +2,7 @@
 function loginWithKakao() {
     Kakao.Auth.login({
       success: function(authObj) {
-        alert(JSON.stringify(authObj));
+        //alert(JSON.stringify(authObj));
         Kakao.API.request({
               url: '/v2/user/me',
               success: function(response) {
