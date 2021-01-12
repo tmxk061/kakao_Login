@@ -51,8 +51,7 @@ function loginWithKakao() {
   }
 
   function MessageTest(){
-    Kakao.Link.createDefaultButton({
-        container: '44532',
+    Kakao.Link.sendDefault({
         objectType: 'feed',
         content: {
           title: '디저트 사진',
