@@ -13,12 +13,8 @@
     function loginWithKakao() {
           Kakao.Auth.authorize({
             redirectUri: 'https://tmxk061.github.io/kakao_Login//kakao_test/loginTest'
-          })
-          callState();
-    }
-
-    function callState(){
-        Kakao.API.request({
+          });
+          Kakao.API.request({
             url: '/v2/user/me',
             success: function(response) {
                 console.log(response);
@@ -27,6 +23,11 @@
                 console.log(error);
             }
         });
+          
+    }
+
+    function callState(){
+        
     }
     </script>
 
