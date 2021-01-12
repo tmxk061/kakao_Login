@@ -7,6 +7,7 @@ function loginWithKakao() {
               url: '/v2/user/me',
               success: function(response) {
                   console.log(response);
+                  alert(response.kakao_account);
               },
               fail: function(error) {
                   console.log(error);
