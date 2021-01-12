@@ -15,8 +15,20 @@
   </a>
   <button onclick="LogoutTest()">로그아웃 버튼</button>
   <button onclick="CallId()">id 확인 버튼</button>
-  <button onclick="MessageTest()">채널 가입 버튼</button>
- 112ㅊ123
+  <!-- <button onclick="MessageTest()">채널 가입 버튼</button> -->
+  <a id="channel-add-button" href="#" onclick="void addChannel();">
+    <img
+      src="/tool/resource/static/img/button/channel/add/channel_add_small.png"
+    />
+  </a>
+  <script type="text/javascript">
+    function addChannel() {
+      Kakao.Channel.addChannel({
+        channelPublicId: '_xcLqmC',
+      })
+    }
+  </script>
+ 112ㅊ123123123
 
      
 </body>
