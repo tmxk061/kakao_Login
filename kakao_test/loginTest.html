@@ -9,11 +9,24 @@
     Kakao.init('08f9c3456cd84f0e93a2f99a212dc02a');
         // SDK 초기화 여부를 판단합니다.
     console.log(Kakao.isInitialized());
-        
+
     function loginWithKakao() {
           Kakao.Auth.authorize({
             redirectUri: 'https://tmxk061.github.io/kakao_Login//kakao_test/loginTest'
           })
+          callState();
+    }
+
+    function callState(){
+        Kakao.API.request({
+            url: '/v2/user/me',
+            success: function(response) {
+                console.log(response);
+            },
+            fail: function(error) {
+                console.log(error);
+            }
+        });
     }
     </script>
 
