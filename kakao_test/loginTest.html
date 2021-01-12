@@ -4,12 +4,12 @@
     <meta charset="utf-8"/>
     <title>Kakao JavaScript SDK</title>
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
         Kakao.init('08f9c3456cd84f0e93a2f99a212dc02a');
         // SDK 초기화 여부를 판단합니다.
         console.log(Kakao.isInitialized());
-    </script>
+    </script> -->
     <script src="js/kakaoAPI.js"></script>
 </head>
 <body>
@@ -21,40 +21,8 @@
   </a>
   <button onclick="LogoutTest()">로그아웃 버튼</button>
   <button onclick="CallId()">id 확인 버튼</button>
-  456
+  111
 
-      <!-- <script type="text/javascript">
-        function loginWithKakao() {
-          Kakao.Auth.login({
-            success: function(authObj) {
-              alert(JSON.stringify(authObj));
-              Kakao.API.request({
-                    url: '/v2/user/me',
-                    success: function(response) {
-                        console.log(response);
-                    },
-                    fail: function(error) {
-                        console.log(error);
-                    }
-                });
-            },
-            fail: function(err) {
-              alert(JSON.stringify(err))
-            },
-          })
-        }
-      </script> -->
-      <!-- <button onclick="LogoutTest()">로그아웃이야</button> -->
-      <!-- <script>
-          function LogoutTest(){
-            if (!Kakao.Auth.getAccessToken()) {
-            console.log('Not logged in.');
-            return;
-            }
-            Kakao.Auth.logout(function() {
-            console.log(Kakao.Auth.getAccessToken());
-            });
-          }
-      </script> -->
+     
 </body>
 </html>
