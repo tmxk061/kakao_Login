@@ -10,6 +10,7 @@
         // SDK 초기화 여부를 판단합니다.
         console.log(Kakao.isInitialized());
     </script>
+    <link href="js/kakaoAPI.js">
 
 </head>
 <body>
@@ -19,7 +20,7 @@
           width="222"
         />
       </a>
-      <script type="text/javascript">
+      <!-- <script type="text/javascript">
         function loginWithKakao() {
           Kakao.Auth.login({
             success: function(authObj) {
@@ -39,9 +40,9 @@
             },
           })
         }
-      </script>
-      <button onclick="LogoutTest()">로그아웃이야</button>
-      <script>
+      </script> -->
+      <!-- <button onclick="LogoutTest()">로그아웃이야</button> -->
+      <!-- <script>
           function LogoutTest(){
             if (!Kakao.Auth.getAccessToken()) {
             console.log('Not logged in.');
@@ -51,6 +52,6 @@
             console.log(Kakao.Auth.getAccessToken());
             });
           }
-      </script>
+      </script> -->
 </body>
 </html>
