@@ -30,3 +30,17 @@ function loginWithKakao() {
     console.log(Kakao.Auth.getAccessToken());
     });
   }
+
+  function CallId(){
+    Kakao.API.request({
+        url: '/v2/user/me',
+        success: function(response) {
+          console.log(response);
+            console.log(response.id);
+            alert(response.id);
+        },
+        fail: function(error) {
+            console.log(error);
+        }
+    });
+  }
