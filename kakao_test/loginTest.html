@@ -19,6 +19,33 @@
         }
       
     </script> -->
+
+    <script type="text/javascript">
+        function loginWithKakao() {
+          Kakao.Auth.login({
+            success: function(authObj) {
+            //   alert(JSON.stringify(authObj))
+            stateCall();
+            },
+            fail: function(err) {
+              alert(JSON.stringify(err))
+            },
+          })
+        }
+
+        function stateCall(){
+            Kakao.API.request({
+                url: '/v2/user/me',
+                success: function(response) {
+                    console.log(response);
+                },
+                fail: function(error) {
+                    console.log(error);
+                }
+            });
+        }
+
+      </script>
 </head>
 <body>
     <a id="custom-login-btn" href="javascript:loginWithKakao()">
@@ -27,18 +54,7 @@
           width="222"
         />
       </a>
-      <script type="text/javascript">
-        function loginWithKakao() {
-          Kakao.Auth.login({
-            success: function(authObj) {
-              alert(JSON.stringify(authObj))
-            },
-            fail: function(err) {
-              alert(JSON.stringify(err))
-            },
-          })
-        }
-      </script>
+     
       
 </body>
 </html>
