@@ -1,3 +1,4 @@
+
 // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
 Kakao.init('08f9c3456cd84f0e93a2f99a212dc02a');
 // SDK 초기화 여부를 판단합니다.
@@ -28,12 +29,12 @@ function loginWithKakao() {
 
   function LogoutTest(){
     if (!Kakao.Auth.getAccessToken()) {
-    console.log('Not logged in.');
+        console.log('Not logged in.');
     return;
     }
     Kakao.Auth.logout(function() {
         alert("로그아웃 되었습니다.");
-    console.log(Kakao.Auth.getAccessToken());
+        console.log(Kakao.Auth.getAccessToken());
     });
   }
 
@@ -47,4 +48,19 @@ function loginWithKakao() {
             console.log(error);
         }
     });
+  }
+
+  function MessageTest(){
+    Kakao.API.request({
+        url: '/v2/api/talk/memo/send',
+        data: {
+          template_id: 44532,
+        },
+        success: function(response) {
+          console.log(response);
+        },
+        fail: function(error) {
+          console.log(error);
+        },
+      });
   }
