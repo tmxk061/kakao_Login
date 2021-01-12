@@ -52,7 +52,7 @@ function loginWithKakao() {
 
   function MessageTest(){
     Kakao.Link.createDefaultButton({
-        container: '#CONTAINER_ID',
+        container: '44532',
         objectType: 'feed',
         content: {
           title: '디저트 사진',
