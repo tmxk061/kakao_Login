@@ -28,7 +28,7 @@
             stateCall();
             },
             fail: function(err) {
-              alert(JSON.stringify(err))
+              //alert(JSON.stringify(err))
             },
           })
         }
@@ -37,7 +37,8 @@
             Kakao.API.request({
                 url: '/v2/user/me',
                 success: function(response) {
-                    console.log(response);
+                    var userID = response.userID;
+                    console.log(userID);
                 },
                 fail: function(error) {
                     console.log(error);
