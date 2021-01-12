@@ -9,53 +9,6 @@
     Kakao.init('08f9c3456cd84f0e93a2f99a212dc02a');
         // SDK 초기화 여부를 판단합니다.
     console.log(Kakao.isInitialized());
-
-    function loginWithKakao() {
-    Kakao.Auth.authorize({
-      redirectUri: 'https://tmxk061.github.io/kakao_Login/kakao_test/loginTest.html'
-    })
-    displayToken();
-  }
-  // 아래는 데모를 위한 UI 코드입니다.
-  displayToken()
-  function displayToken() {
-    const token = getCookie('authorize-access-token')
-    if(token) {
-      Kakao.Auth.setAccessToken(token)
-      Kakao.Auth.getStatusInfo(({ status }) => {
-        if(status === 'connected') {
-          document.getElementById('token-result').innerText = 'login success. token: ' + Kakao.Auth.getAccessToken()
-        } else {
-          Kakao.Auth.setAccessToken(null)
-        }
-      })
-    }
-  }
-  function getCookie(name) {
-    const value = "; " + document.cookie;
-    const parts = value.split("; " + name + "=");
-    if (parts.length === 2) return parts.pop().split(";").shift();
-  }
-
-
-    // function loginFormWithKakao() { 
-    //     Kakao.Auth.loginForm({ 
-    //         success: function(authObj) { 
-    //             Kakao.API.request({ 
-    //                 url: '/v2/user/me', 
-    //                 success: 
-    //                 function(res) { 
-    //                     console.log(res.kakao_account['email']) 
-    //                     console.log(res.id) 
-    //                 } 
-    //             }) 
-    //         }, 
-            
-    //         fail: function(err) { 
-    //             alert(JSON.stringify(err)) 
-    //         }, 
-    //     }) 
-    // }
     </script>
 </head>
 <body>
@@ -65,5 +18,33 @@
           width="222"
         />
       </a>
+      <p id="token-result"></p>
+      <script type="text/javascript">
+        function loginWithKakao() {
+          Kakao.Auth.authorize({
+            redirectUri: 'https://tmxk061.github.io/kakao_Login//kakao_test/loginTest'
+          })
+        }
+        // 아래는 데모를 위한 UI 코드입니다.
+        displayToken()
+        function displayToken() {
+          const token = getCookie('authorize-access-token')
+          if(token) {
+            Kakao.Auth.setAccessToken(token)
+            Kakao.Auth.getStatusInfo(({ status }) => {
+              if(status === 'connected') {
+                document.getElementById('token-result').innerText = 'login success. token: ' + Kakao.Auth.getAccessToken()
+              } else {
+                Kakao.Auth.setAccessToken(null)
+              }
+            })
+          }
+        }
+        function getCookie(name) {
+          const value = "; " + document.cookie;
+          const parts = value.split("; " + name + "=");
+          if (parts.length === 2) return parts.pop().split(";").shift();
+        }
+      </script>
 </body>
 </html>
