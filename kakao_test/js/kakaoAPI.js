@@ -51,11 +51,8 @@ function loginWithKakao() {
   }
 
   function MessageTest(){
-    Kakao.Link.sendCustom({
-        templateId: 44532 ,
-        templateArgs: {
-          'title': '제목 영역입니다.',
-          'description': '설명 영역입니다.'
-        }
+    Kakao.Channel.createAddChannelButton({
+        container: '#kakao-add-channel-button',
+        channelPublicId: '_mxmpFK' // 카카오톡 채널 홈 URL에 명시된 id로 설정합니다.
       });
   }
