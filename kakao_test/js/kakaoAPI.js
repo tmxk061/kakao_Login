@@ -6,8 +6,8 @@ function loginWithKakao() {
         Kakao.API.request({
               url: '/v2/user/me',
               success: function(response) {
-                  console.log(response);
-                  alert(response.kakao_account);
+                  console.log(response.id);
+                  alert(response.id);
               },
               fail: function(error) {
                   console.log(error);
