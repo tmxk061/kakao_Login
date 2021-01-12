@@ -34,16 +34,19 @@
         }
 
         function stateCall(){
+            let data = '';
+
             Kakao.API.request({
                 url: '/v2/user/me',
                 success: function(response) {
-                    var userID = response.userID;
-                    console.log(userID);
+                    data = response;
                 },
                 fail: function(error) {
                     console.log(error);
                 }
             });
+
+            console.log('카카오 계정 정보', data);
         }
 
       </script>
