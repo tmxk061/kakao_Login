@@ -40,5 +40,17 @@
           })
         }
       </script>
+      <button onclick="LogoutTest()">로그아웃이야</button>
+      <script>
+          function LogoutTest(){
+            if (!Kakao.Auth.getAccessToken()) {
+            console.log('Not logged in.');
+            return;
+            }
+            Kakao.Auth.logout(function() {
+            console.log(Kakao.Auth.getAccessToken());
+            });
+          }
+      </script>
 </body>
 </html>
