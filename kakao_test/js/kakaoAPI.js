@@ -2,17 +2,17 @@
 function loginWithKakao() {
     Kakao.Auth.login({
       success: function(authObj) {
-        alert(JSON.stringify(authObj));
-        // Kakao.API.request({
-        //       url: '/v2/user/me',
-        //       success: function(response) {
-        //           console.log(response.id);
-        //           alert(response.id);
-        //       },
-        //       fail: function(error) {
-        //           console.log(error);
-        //       }
-        //   });
+        //alert(JSON.stringify(authObj));
+        Kakao.API.request({
+              url: '/v2/user/me',
+              success: function(response) {
+                  console.log(response.id);
+                  alert(response.id);
+              },
+              fail: function(error) {
+                  console.log(error);
+              }
+          });
       },
       fail: function(err) {
         alert(JSON.stringify(err))
