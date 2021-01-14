@@ -1,6 +1,6 @@
 
 
-var save_id_DB = ["1592528927","1592738539"];
+const save_id_DB = ["1592528927","1592738539"];
 
 //로그인 과정
 function loginWithKakao_main() {
@@ -13,7 +13,7 @@ function loginWithKakao_main() {
                   //console.log(response);
                   //console.log(response.id);
                   //alert(response.id);
-                  LoginCheckRogic(response.id);
+                  LoginCheckRogic(String(response.id));
               },
               fail: function(error) {
                   console.log(error);
