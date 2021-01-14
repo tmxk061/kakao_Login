@@ -27,8 +27,8 @@ function loginWithKakao_main() {
   }
 
   function LoginCheckRogic(id){
-    console.log(String(id));
-    if(LoginIDCheck(String(id)))
+      console.log(LoginIDCheck(id));
+    if(LoginIDCheck(id))
     {
         alert("로그인 되었습니다.")
     }
@@ -39,20 +39,9 @@ function loginWithKakao_main() {
 }
 
     function LoginIDCheck(sid){
-        // save_id_DB.forEach(function(element){
-        //     console.log("1592528927","1592528927");
-        //     if("1592528927" == "1592528927")
-        //     {
-        //         return true;
-        //     }
-        // })
-
-        // return false;
-
-
+       
         save_id_DB.forEach(element => {
-            console.log("1592528927","1592528927");
-            if("1592528927" == "1592528927")
+            if(element == sid)
             {
                 return true;
             }
