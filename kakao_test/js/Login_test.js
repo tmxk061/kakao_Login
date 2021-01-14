@@ -1,6 +1,6 @@
 
 
-const save_id_DB = ["1592528927","1592738539"];
+var save_id_DB = ["1592528927","1592738539"];
 
 //로그인 과정
 function loginWithKakao_main() {
