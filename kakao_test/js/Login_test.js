@@ -39,7 +39,7 @@ function loginWithKakao_main() {
 
     function LoginIDCheck(id){
         save_id_DB.forEach(function(element){
-            console.log(id,element);
+            console.log(String(id),element);
             if(String(element) == String(id))
             {
                 return true;
