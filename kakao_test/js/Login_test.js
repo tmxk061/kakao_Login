@@ -27,7 +27,6 @@ function loginWithKakao_main() {
   }
 
   function LoginCheckRogic(id){
-      console.log(LoginIDCheck(id));
     if(LoginIDCheck(id))
     {
         alert("로그인 되었습니다.")
