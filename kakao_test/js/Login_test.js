@@ -27,8 +27,8 @@ function loginWithKakao_main() {
   }
 
   function LoginCheckRogic(id){
-    console.log(id);
-    if(LoginIDCheck(id))
+    console.log(String(id));
+    if(LoginIDCheck(String(id)))
     {
         alert("로그인 되었습니다.")
     }
@@ -38,10 +38,10 @@ function loginWithKakao_main() {
     }
 }
 
-    function LoginIDCheck(id){
+    function LoginIDCheck(sid){
         save_id_DB.forEach(function(element){
-            console.log(id,element);
-            if(element == String(id))
+            console.log(sid,element);
+            if(element == sid)
             {
                 return true;
             }
