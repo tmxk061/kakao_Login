@@ -1,6 +1,6 @@
 
 
-var save_id_DB = ["1592528927","1592738539"];
+const save_id_DB = ["1592528927","1592738539"];
 
 //로그인 과정
 function loginWithKakao_main() {
@@ -36,11 +36,12 @@ function loginWithKakao_main() {
     {
         alert("회원이 아닙니다.")
     }
+}
 
     function LoginIDCheck(id){
         save_id_DB.forEach(function(element){
-            console.log(String(id),element);
-            if(element == String(id))
+            console.log(id,element);
+            if(element == id)
             {
                 return true;
             }
@@ -49,4 +50,3 @@ function loginWithKakao_main() {
         return false;
 
     }
-}
