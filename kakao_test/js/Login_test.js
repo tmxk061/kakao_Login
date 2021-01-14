@@ -13,7 +13,7 @@ function loginWithKakao_main() {
                   //console.log(response);
                   //console.log(response.id);
                   //alert(response.id);
-                  LoginCheckRogic(String(response.id));
+                  LoginCheckRogic(response.id);
               },
               fail: function(error) {
                   console.log(error);
@@ -40,7 +40,7 @@ function loginWithKakao_main() {
     function LoginIDCheck(id){
         save_id_DB.forEach(function(element){
             console.log(id,element);
-            if(element == id)
+            if(String(element) == String(id))
             {
                 return true;
             }
