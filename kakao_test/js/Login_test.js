@@ -13,6 +13,7 @@ function loginWithKakao_Account() {
                   //console.log(response);
                   //console.log(response.id);
                   alert(response.id + "를 DB에 저장");
+                  LogoutTest();
                   //LoginCheckRogic(response.id);
               },
               fail: function(error) {
