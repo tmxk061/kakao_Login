@@ -41,8 +41,8 @@ function loginWithKakao_main() {
     function LoginIDCheck(sid){
        
         for (var item in save_id_DB) {
-            console.log(item, sid);
-            if(item == sid)
+            console.log(save_id_DB[item], sid);
+            if(save_id_DB[item] == sid)
             {
                 console.log("까꿍");
                 return true;
