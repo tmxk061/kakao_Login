@@ -43,6 +43,7 @@ function loginWithKakao_main() {
         save_id_DB.forEach(element => {
             if(element == sid)
             {
+                console.log("까꿍");
                 return true;
             }
         });
