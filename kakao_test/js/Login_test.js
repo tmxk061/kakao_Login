@@ -1,6 +1,6 @@
 
 
-const save_id_DB = ["1592528927","1592738539"];
+var save_id_DB = ["1592528927","1592738539"];
 
 //로그인 과정
 function loginWithKakao_main() {
@@ -40,7 +40,7 @@ function loginWithKakao_main() {
     function LoginIDCheck(id){
         save_id_DB.forEach(function(element){
             console.log(String(id),element);
-            if(String(element) == String(id))
+            if(element == String(id))
             {
                 return true;
             }
