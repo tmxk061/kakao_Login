@@ -12,9 +12,10 @@ function loginWithKakao() {
         Kakao.API.request({
               url: '/v2/user/me',
               success: function(response) {
-                console.log(response);
-                  console.log(response.id);
-                  alert(response.id);
+                  //console.log(response);
+                  //console.log(response.id);
+                  return response.id;
+                  //alert(response.id);
               },
               fail: function(error) {
                   console.log(error);
