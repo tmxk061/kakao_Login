@@ -1,8 +1,8 @@
 
 
-var save_id = "1592528927";
+const save_id_DB = ["1592528927","1592738539"];
 
-
+//로그인 과정
 function loginWithKakao_main() {
     Kakao.Auth.login({
       success: function(authObj) {
@@ -13,7 +13,7 @@ function loginWithKakao_main() {
                   //console.log(response);
                   //console.log(response.id);
                   //alert(response.id);
-                  LoginCheck(response.id);
+                  LoginCheckRogic(response.id);
               },
               fail: function(error) {
                   console.log(error);
@@ -26,14 +26,26 @@ function loginWithKakao_main() {
     })
   }
 
-  function LoginCheck(id){
+  function LoginCheckRogic(id){
     console.log(id);
-    if(id == save_id)
+    if(LoginIDCheck(id))
     {
         alert("로그인 되었습니다.")
     }
     else
     {
         alert("회원이 아닙니다.")
+    }
+
+    function LoginIDCheck(id){
+        save_id_DB.forEach(function(element){
+            if(element == id)
+            {
+                return true;
+            }
+        })
+
+        return false;
+
     }
 }
