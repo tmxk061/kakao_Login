@@ -40,13 +40,13 @@ function loginWithKakao_main() {
 
     function LoginIDCheck(sid){
        
-        save_id_DB.forEach(element => {
+        for (var item in save_id_DB) {
             if(element == sid)
             {
                 console.log("까꿍");
                 return true;
             }
-        });
+        }
 
         return false;
 
